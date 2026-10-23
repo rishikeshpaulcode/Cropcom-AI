@@ -7,4 +7,4 @@ llama-cpp-python
 sarvamai
 langchain
 langchain-core
-langchain-nvidia-ai-endpoints
+langchain-google-genai
