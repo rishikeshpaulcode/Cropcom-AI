@@ -128,14 +128,15 @@ if __name__ == "__main__":
             # store generated suggestion into csv file if quality criteria satisfied
             print("Pass! Writing...", end=" ")
             csv_writer.writerow([i, teacher_response.summary, teacher_response.instructions])
-
             print("Written succesfully.")
-            i += 1
         
         except Exception as e:
             print("\nError Encountered.")
             print(e)
             break
+
+        finally:
+            i += 1
     
     OUTPUT_FILE.close()
-    print(f"\nSuccessfully saved {i} samples to {OUTPUT_FILE}")
+    print(f"\nSuccessfully saved {i - 1} samples to {OUTPUT_FILE}")
